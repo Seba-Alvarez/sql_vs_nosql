@@ -334,3 +334,44 @@ tbody tr:nth-child(11) { animation-delay: 1.1s; }
         transform: translateX(0);
     }
 }
+
+
+.nav-bar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 10px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.nav-btn {
+    text-decoration: none;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.25s;
+    font-size: 0.95rem;
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.nav-btn.primary {
+    background: #2563eb;
+}
+
+.nav-btn.primary:hover {
+    background: #1d4ed8;
+}

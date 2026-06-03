@@ -1,13 +1,15 @@
 /* =====================================
-   ESTILOS GENERALES
+   RESET
 ===================================== */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* =====================================
+   BODY
+===================================== */
 body {
     font-family: 'Poppins', sans-serif;
     background: #f4f7fb;
@@ -18,7 +20,6 @@ body {
 /* =====================================
    HERO
 ===================================== */
-
 .hero {
     background: linear-gradient(135deg, #0f172a, #1e40af);
     color: white;
@@ -40,11 +41,10 @@ body {
 /* =====================================
    SECCIONES
 ===================================== */
-
 .section {
     max-width: 1200px;
-    margin: auto;
-    padding: 50px 20px;
+    margin: 60px auto;
+    padding: 0 20px;
 }
 
 .section h2 {
@@ -55,9 +55,8 @@ body {
 }
 
 /* =====================================
-   TARJETAS
+   CARDS
 ===================================== */
-
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -94,9 +93,8 @@ body {
 }
 
 /* =====================================
-   CÓDIGO SQL
+   CÓDIGO
 ===================================== */
-
 .code-container {
     margin-top: 20px;
     border-radius: 12px;
@@ -116,21 +114,121 @@ code {
 }
 
 /* =====================================
+   PRÁCTICA (NUEVO - DEL SEGUNDO CSS)
+===================================== */
+.practica-container {
+    display: flex;
+    gap: 25px;
+    width: 100%;
+    margin: 60px 0;
+    padding: 0 20px;
+}
+
+.practica-sql,
+.practica-resultado {
+    flex: 1;
+    min-width: 0;
+}
+
+@media (max-width: 768px) {
+    .practica-container {
+        flex-direction: column;
+    }
+}
+
+/* Botón */
+.btn-probar {
+    margin-top: 20px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-probar:hover {
+    background: #1d4ed8;
+}
+
+/* Resultado */
+.result-box {
+    background: #fff;
+    min-height: 350px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 15px;
+    animation: aparecer 0.5s ease;
+}
+
+/* Animación */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================================
    FOOTER
 ===================================== */
-
 footer {
-    background: #0f172a;
-    color: white;
-    text-align: center;
     padding: 20px;
     margin-top: 40px;
 }
 
 /* =====================================
+   NAV BAR
+===================================== */
+.nav-bar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 10px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    z-index: 1000;
+}
+
+.nav-btn {
+    text-decoration: none;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.25s;
+    font-size: 0.95rem;
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.nav-btn.primary {
+    background: #2563eb;
+}
+
+.nav-btn.primary:hover {
+    background: #1d4ed8;
+}
+
+/* =====================================
    RESPONSIVE
 ===================================== */
-
 @media (max-width: 768px) {
 
     .hero h1 {
@@ -148,24 +246,17 @@ footer {
     pre {
         font-size: 0.8rem;
     }
+
+.practica-container {
+    display: flex;
+    gap: 25px;
+
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 60px auto;
+    padding: 0;
+
+    box-sizing: border-box;
 }
-
-/* =====================================
-   BOTÓN
-===================================== */
-
-.btn-probar {
-    margin-top: 20px;
-    background: #2563eb;
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.btn-probar:hover {
-    background: #1d4ed8;
 }
