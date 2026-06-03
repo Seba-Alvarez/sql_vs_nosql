@@ -40,7 +40,10 @@ body {
 .card {
     min-width: 320px;
     height: 180px;
-    margin: 0 10px;
+    margin: 0;           
+    padding: 0 10px;       
+    box-sizing: border-box;
+
     border-radius: 20px;
     background: rgba(255,255,255,0.15);
     backdrop-filter: blur(10px);
@@ -56,6 +59,10 @@ body {
     transform: scale(0.85);
     opacity: 0.6;
     transition: 0.4s;
+
+    position: relative;
+    z-index: 1;
+    pointer-events: auto;
 }
 
 /* BOTÓN CENTRAL (ACTIVO) */
