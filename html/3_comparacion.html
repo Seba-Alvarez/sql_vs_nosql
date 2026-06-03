@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparación SQL vs NoSQL</title>
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="../styles/3_comparacion.css">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="hero">
+        <h1>SQL vs NoSQL</h1>
+        <p>
+            Comparación entre bases de datos relacionales y no relacionales.
+        </p>
+    </header>
+    <main>
+
+        <section class="compare-section">
+
+            <h2>Comparación entre SQL y NoSQL</h2>
+
+            <div class="compare-container">
+
+                <!-- SQL -->
+                <div class="compare-card sql">
+
+                    <h3>SQL (Relacional)</h3>
+
+                    <ul>
+                        <li>Estructura basada en tablas.</li>
+                        <li>Esquema rígido y predefinido.</li>
+                        <li>Uso de claves primarias y foráneas.</li>
+                        <li>Relaciones entre entidades.</li>
+                        <li>Lenguaje estándar SQL.</li>
+                        <li>Alta integridad de datos.</li>
+                        <li>Escalado vertical.</li>
+                    </ul>
+
+                </div>
+
+                <!-- NoSQL -->
+                <div class="compare-card nosql">
+
+                    <h3>NoSQL (No relacional)</h3>
+
+                    <ul>
+                        <li>Basado en documentos, grafos o clave-valor.</li>
+                        <li>Esquema flexible o inexistente.</li>
+                        <li>No depende de relaciones fijas.</li>
+                        <li>Datos anidados y dinámicos.</li>
+                        <li>Consultas según motor de base de datos.</li>
+                        <li>Escalado horizontal.</li>
+                        <li>Optimizado para Big Data.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- OPERACIONES -->
+
+<section class="operations-section">
+
+    <h2>Operaciones comunes SQL vs MongoDB</h2>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Operación</th>
+                    <th>SQL</th>
+                    <th>MongoDB</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Seleccionar todos</td>
+                    <td>SELECT * FROM users;</td>
+                    <td>db.users.find({})</td>
+                </tr>
+
+                <tr>
+                    <td>Filtrar datos</td>
+                    <td>SELECT * FROM users WHERE age > 18;</td>
+                    <td>db.users.find({ age: { $gt: 18 } })</td>
+                </tr>
+
+                <tr>
+                    <td>Insertar</td>
+                    <td>INSERT INTO users VALUES (...)</td>
+                    <td>db.users.insertOne({...})</td>
+                </tr>
+
+                <tr>
+                    <td>Actualizar</td>
+                    <td>UPDATE users SET age=25 WHERE id=1;</td>
+                    <td>db.users.updateOne({id:1}, {$set:{age:25}})</td>
+                </tr>
+
+                <tr>
+                    <td>Eliminar</td>
+                    <td>DELETE FROM users WHERE id=1;</td>
+                    <td>db.users.deleteOne({id:1})</td>
+                </tr>
+
+                <tr>
+                    <td>Ordenar</td>
+                    <td>ORDER BY age ASC</td>
+                    <td>.sort({ age: 1 })</td>
+                </tr>
+
+                <tr>
+                    <td>Limitar resultados</td>
+                    <td>LIMIT 10</td>
+                    <td>.limit(10)</td>
+                </tr>
+
+                <tr>
+                    <td>Contar registros</td>
+                    <td>COUNT(*)</td>
+                    <td>countDocuments()</td>
+                </tr>
+
+                <tr>
+                    <td>JOIN</td>
+                    <td>JOIN</td>
+                    <td>$lookup</td>
+                </tr>
+
+                <tr>
+                    <td>GROUP BY</td>
+                    <td>GROUP BY</td>
+                    <td>$group</td>
+                </tr>
+
+                <tr>
+                    <td>ALTER TABLE</td>
+                    <td>ALTER TABLE</td>
+                    <td>updateMany + $set</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+    </main>
+
+</body>
+</html>

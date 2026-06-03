@@ -1,0 +1,336 @@
+/* =====================================
+   ESTILO GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7fb;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero {
+    background: linear-gradient(135deg, #0f172a, #1e40af);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+
+    /* animación entrada */
+    animation: fadeDown 0.8s ease;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* =====================================
+   SECCIÓN
+===================================== */
+
+.compare-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+
+    animation: fadeUp 0.8s ease;
+}
+
+.compare-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #1e3a8a;
+}
+
+/* =====================================
+   CONTENEDOR
+===================================== */
+
+.compare-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* =====================================
+   TARJETAS
+===================================== */
+
+.compare-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+
+    /* animación base */
+    animation: fadeUp 0.6s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* hover suave */
+.compare-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* TÍTULOS */
+.compare-card h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* LISTAS */
+.compare-card ul {
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+/* =====================================
+   SQL
+===================================== */
+
+.compare-card.sql {
+    border-left: 6px solid hsl(271, 93%, 53%);
+}
+
+.compare-card.sql h3 {
+    color: hsl(271, 87%, 42%);
+}
+
+/* NoSQL */
+.compare-card.nosql {
+    border-left: 6px solid hsl(184, 90%, 50%);
+}
+
+.compare-card.nosql h3 {
+    color: hsl(184, 90%, 50%);
+}
+
+/* =====================================
+   ANIMACIONES
+===================================== */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .compare-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .compare-card {
+        padding: 20px;
+    }
+}
+
+/* =====================================
+   TABLA SQL VS MONGODB
+===================================== */
+
+.operations-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.operations-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1e3a8a;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+thead {
+    background: #1e3a8a;
+    color: white;
+}
+
+th,
+td {
+    padding: 15px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+td:nth-child(2) {
+    color: hsl(271, 87%, 42%);
+    font-weight: 500;
+}
+
+td:nth-child(3) {
+    color: hsl(184, 90%, 40%);
+    font-weight: 500;
+}
+
+/* =====================================
+   TABLA SQL VS MONGODB
+===================================== */
+
+.operations-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+
+    animation: slideFromLeft 0.8s ease;
+}
+
+.operations-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1e3a8a;
+}
+
+.table-container {
+    overflow-x: auto;
+    animation: slideFromLeft 1s ease;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Hover de toda la tabla */
+table:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+thead {
+    background: #1e3a8a;
+    color: white;
+}
+
+th,
+td {
+    padding: 15px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+
+    transition: background 0.2s ease,
+                color 0.2s ease;
+}
+
+/* Hover por fila */
+tbody tr:hover {
+    background: #f8fafc;
+    transform: scale(1.01);
+}
+
+/* Columna SQL */
+td:nth-child(2) {
+    color: hsl(271, 87%, 42%);
+    font-weight: 500;
+}
+
+/* Columna MongoDB */
+td:nth-child(3) {
+    color: hsl(184, 90%, 40%);
+    font-weight: 500;
+}
+
+/* =====================================
+   ANIMACIÓN FILAS
+===================================== */
+
+tbody tr {
+    opacity: 0;
+    animation: slideFromLeft 0.6s ease forwards;
+}
+
+tbody tr:nth-child(1)  { animation-delay: 0.1s; }
+tbody tr:nth-child(2)  { animation-delay: 0.2s; }
+tbody tr:nth-child(3)  { animation-delay: 0.3s; }
+tbody tr:nth-child(4)  { animation-delay: 0.4s; }
+tbody tr:nth-child(5)  { animation-delay: 0.5s; }
+tbody tr:nth-child(6)  { animation-delay: 0.6s; }
+tbody tr:nth-child(7)  { animation-delay: 0.7s; }
+tbody tr:nth-child(8)  { animation-delay: 0.8s; }
+tbody tr:nth-child(9)  { animation-delay: 0.9s; }
+tbody tr:nth-child(10) { animation-delay: 1s; }
+tbody tr:nth-child(11) { animation-delay: 1.1s; }
+
+/* =====================================
+   KEYFRAMES
+===================================== */
+
+@keyframes slideFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

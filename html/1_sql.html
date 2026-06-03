@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué es SQL?</title>
+
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="../styles/1_sql.css">
+    <!-- Fuente moderna de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Encabezado principal -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>¿Qué es SQL?</h1>
+            <p>
+                Structured Query Language (SQL) es el lenguaje estándar utilizado
+                para gestionar y consultar bases de datos relacionales.
+            </p>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- Definición de SQL -->
+        <section class="section">
+            <h2>Definición de SQL</h2>
+
+            <div class="card">
+                <p>
+                    SQL (Structured Query Language) es un lenguaje diseñado para
+                    crear, administrar y consultar información almacenada en
+                    bases de datos relacionales.
+                </p>
+
+                <p>
+                    Permite organizar datos en tablas relacionadas mediante claves
+                    y reglas estructuradas, facilitando el almacenamiento y la
+                    recuperación eficiente de información.
+                </p>
+            </div>
+        </section>
+
+        <!-- Conceptos fundamentales -->
+        <section class="section">
+            <h2>Conceptos Fundamentales</h2>
+
+            <div class="cards-container">
+
+                <div class="card">
+                    <h3> Tablas</h3>
+                    <p>
+                        Son estructuras que almacenan información organizada.
+                        Cada tabla representa una entidad del sistema.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3> Filas</h3>
+                    <p>
+                        Representan registros individuales dentro de una tabla.
+                        Cada fila contiene datos específicos.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3> Columnas</h3>
+                    <p>
+                        Definen los atributos o características de los registros
+                        almacenados.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Claves -->
+        <section class="section">
+            <h2>Claves Primarias y Foráneas</h2>
+
+            <div class="cards-container">
+
+                <div class="card">
+                    <h3> Clave Primaria (Primary Key)</h3>
+                    <p>
+                        Identifica de manera única cada registro de una tabla.
+                        No puede repetirse ni contener valores nulos.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3> Clave Foránea (Foreign Key)</h3>
+                    <p>
+                        Establece relaciones entre tablas, permitiendo conectar
+                        información de distintas entidades.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Esquemas -->
+        <section class="section">
+            <h2>Importancia de los Esquemas Definidos</h2>
+
+            <div class="card">
+                <p>
+                    Un esquema define la estructura de la base de datos:
+                    tablas, columnas, tipos de datos y relaciones.
+                </p>
+
+                <p>
+                    Gracias a los esquemas, los datos mantienen integridad,
+                    consistencia y organización, evitando errores y duplicidades.
+                </p>
+
+                <p>
+                    Además, facilitan el mantenimiento y escalabilidad de los
+                    sistemas de información.
+                </p>
+            </div>
+        </section>
+
+        <!-- Ventajas y desventajas -->
+        <section class="section">
+            <h2>Ventajas y Desventajas de SQL</h2>
+
+            <div class="cards-container">
+
+                <div class="card success">
+                    <h3>Ventajas</h3>
+                    <ul>
+                        <li>Alta integridad de datos.</li>
+                        <li>Consultas potentes y flexibles.</li>
+                        <li>Estándar ampliamente utilizado.</li>
+                        <li>Soporte para relaciones complejas.</li>
+                        <li>Seguridad y control de acceso.</li>
+                    </ul>
+                </div>
+
+                <div class="card danger">
+                    <h3>Desventajas</h3>
+                    <ul>
+                        <li>Escalabilidad horizontal limitada.</li>
+                        <li>Mayor rigidez estructural.</li>
+                        <li>Diseño inicial más complejo.</li>
+                        <li>Puede requerir optimización avanzada.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+<div class="practica-container">
+
+    <!-- Columna izquierda -->
+    <div class="card practica-sql">
+        <p>
+            A continuación se muestra un ejemplo de un esquema relacional
+            para un sistema de preguntas y respuestas:
+        </p>
+
+        <div class="code-container">
+            <pre><code>
+<span class="keyword">CREATE TABLE</span> <span class="table">usuario</span> (
+    id_usuario <span class="type">INT</span> <span class="keyword">PRIMARY KEY</span>,
+    nombre <span class="type">VARCHAR(100)</span>,
+    correo <span class="type">VARCHAR(150)</span>
+);
+
+<span class="keyword">CREATE TABLE</span> <span class="table">pregunta</span> (
+    id_pregunta <span class="type">INT</span> <span class="keyword">PRIMARY KEY</span>,
+    titulo <span class="type">VARCHAR(255)</span>,
+    descripcion <span class="type">TEXT</span>
+);
+            </code></pre>
+        </div>
+
+        <button class="btn-probar">Probar</button>
+    </div>
+
+    <!-- Columna derecha -->
+    <div class="card practica-resultado">
+        <p>
+            A continuación se muestra el resultado de la prueba de creación de tablas:
+        </p>
+
+        <div class="result-box">
+            Presiona el botón "prueba"...
+        </div>
+    </div>
+
+</div>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>SQL - Bases de Datos Relacionales | Página Educativa</p>
+    </footer>
+
+<script src="../scripts/script.js"></script>
+</body>
+</html>

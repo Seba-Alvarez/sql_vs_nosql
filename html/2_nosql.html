@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué es NoSQL?</title>
+
+    <!-- Fuente moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="../styles/2_nosql.css">
+</head>
+
+<body>
+
+<header class="hero">
+    <h1>¿Qué es NoSQL?</h1>
+    <p>
+        Aprende qué son las bases de datos NoSQL, cómo funcionan y por qué se utilizan en sistemas modernos de alto rendimiento.
+    </p>
+</header>
+
+<section class="section">
+    <h2>Definición de NoSQL</h2>
+    <div class="card">
+        <p>
+            NoSQL es un tipo de base de datos diseñada para almacenar, consultar y gestionar datos de manera flexible,
+            sin depender del modelo relacional tradicional basado en tablas.
+        </p>
+        <br>
+        <p>
+            Su objetivo es manejar grandes volúmenes de datos distribuidos y escalables.
+        </p>
+    </div>
+</section>
+
+<section class="section">
+    <h2>¿Qué significa "Not Only SQL"?</h2>
+    <div class="card">
+        <p>
+            NoSQL no significa “sin SQL”, sino “Not Only SQL”.
+            Esto indica que algunas bases NoSQL pueden usar SQL o conceptos similares,
+            pero no dependen exclusivamente del modelo relacional.
+        </p>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Tipos de Bases de Datos NoSQL</h2>
+
+    <div class="cards-container">
+
+        <div class="card">
+            <h3> Documentos JSON</h3>
+            <ul>
+                <li>Almacenan datos en formato JSON o BSON.</li>
+                <li>Flexibles y fáciles de escalar.</li>
+                <li>Ej: MongoDB</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3> Clave - Valor</h3>
+            <ul>
+                <li>Datos almacenados como pares clave-valor.</li>
+                <li>Extremadamente rápidas.</li>
+                <li>Ej: Redis</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3> Grafos</h3>
+            <ul>
+                <li>Basadas en nodos y relaciones.</li>
+                <li>Ideales para redes sociales.</li>
+                <li>Ej: Neo4j</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3> Columnas</h3>
+            <ul>
+                <li>Organizan datos por columnas en lugar de filas.</li>
+                <li>Alta eficiencia en Big Data.</li>
+                <li>Ej: Cassandra</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="section">
+    <h2>Ventajas y Desventajas</h2>
+
+    <div class="cards-container">
+
+        <div class="card success">
+            <h3>Ventajas</h3>
+            <ul>
+                <li>Alta escalabilidad</li>
+                <li>Flexibilidad de datos</li>
+                <li>Rendimiento en grandes volúmenes</li>
+            </ul>
+        </div>
+
+        <div class="card danger">
+            <h3>Desventajas</h3>
+            <ul>
+                <li>Menos estandarización</li>
+                <li>Consultas complejas limitadas</li>
+                <li>Consistencia eventual en algunos casos</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<div class="practica-container">
+
+    <!-- Columna izquierda -->
+    <div class="card practica-sql">
+
+        <p>
+            Ejemplo de base de datos NoSQL en formato documentos JSON:
+        </p>
+
+        <div class="code-container">
+            <pre><code>
+{
+  "usuarios": {
+    "id": 1,
+    "nombre": "Ana",
+    "correo": "ana@email.com"
+  },
+
+  "preguntas": {
+    "id": 101,
+    "titulo": "¿Qué es NoSQL?",
+    "descripcion": "Base de datos flexible sin esquema fijo"
+  },
+
+  "respuestas": {
+    "id": 9001,
+    "pregunta_id": 101,
+    "respuesta": "NoSQL significa Not Only SQL"
+  }
+}
+            </code></pre>
+        </div>
+
+        <button class="btn-probar">Probar</button>
+    </div>
+
+    <!-- Columna derecha -->
+    <div class="card practica-resultado">
+
+        <p>
+            A continuación se muestra el resultado de la prueba NoSQL:
+        </p>
+
+        <div class="result-box">
+            Presiona el botón "prueba"...
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 - ¿Qué es NoSQL? | Página educativa</p>
+</footer>
+
+<!-- JS -->
+<script src="../scripts/script.js"></script>
+
+</body>
+</html>
